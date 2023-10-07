@@ -1,3 +1,60 @@
 body {
-    background-color: #BBDEF0;
+  background-color: #BBDEF0;
 }
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  margin-top: 50px;
+}
+
+.header {
+  position: relative;
+  padding-bottom: 40px;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #637db1;
+}
+.header .desc {
+  display: inline-block;
+  position: absolute;
+  left: 90px;
+  transition: font-size 0.7s ease;
+}
+.header .desc:hover {
+  font-size: 30px;
+  transition: font-size 0.7s ease;
+}
+
+.title {
+  font-size: 56px;
+  color: #f2f9ff;
+  text-shadow: rgb(114, 184, 250) 0.3vh 0.3vh;
+}
+
+.desc {
+  font-size: 25px;
+  color: #f2f9ff;
+  text-shadow: rgb(114, 184, 250) 0.3vh 0.3vh;
+}/*# sourceMappingURL=style.css.map */
