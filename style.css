@@ -113,7 +113,7 @@ section {
   font-size: 16px;
 }
 .cards .card .edit {
-  background: url(./assets/img/svg/pencil-change.svg);
+  background: url(./assets/img/svg/change-icon.svg);
   position: absolute;
   display: block;
   z-index: 3;
@@ -140,9 +140,10 @@ section {
 }
 
 .add-book-popup {
-  position: absolute;
+  position: fixed;
+  display: none;
   top: 50%;
-  left: 45%;
+  left: 50%;
   text-align: center;
   width: 250px;
   height: 250px;
@@ -152,6 +153,7 @@ section {
   border-radius: 10px;
   background-color: #d9e0e7;
   box-shadow: 0 3px 10px var(--opac-black);
+  z-index: 2;
 }
 .add-book-popup .popup-header {
   display: flex;
@@ -192,4 +194,24 @@ section {
 .add-book-popup #submitBook:hover {
   color: #63678a;
   transition: color 0.4s ease;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+.footer .add-book-btn {
+  background: url(./assets/img/svg/add-icon.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.footer .add-book-btn:hover {
+  width: 55px;
+  height: 55px;
+  transition: all 0.7s ease;
 }/*# sourceMappingURL=style.css.map */

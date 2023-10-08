@@ -1,3 +1,4 @@
+let body = document.querySelector(".body-wrapper");
 const myLibrary = ["The Hobbit", "A Game of Thrones"];
 
 function Book(title) {
@@ -30,12 +31,22 @@ for (let i = 0; i < btnClick.length; i++) {
         confetti_button().then(() => container.removeChild(canvas));
     });
 }
+let addBook = document.querySelector(".add-book-popup");
 function closePopup() {
-    let addBook = document.querySelector(".add-book-popup");
     let closeIcon = document.querySelector('.close-popup');
     closeIcon.addEventListener("click", () => {
         addBook.style.display = "none";
+        document.body.style.filter = "none";
+    })
+}
+function openPopup() {
+    let openIcon = document.querySelector(".add-book-btn");
+    openIcon.addEventListener("click", () => {
+        addBook.style.display = "block";
+        // if (addBook.style.display === "block") {
+        //     document.body.style.filter = "blur(5px)";
+        // }
     })
 }
 closePopup()
-
+openPopup()

@@ -16,66 +16,74 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1 class="title">Library</h1>
-                <a href="https://github.com/Asya0" class="desc">
-                    by Anna
-                </a>
-            </div>
-        </div>
-
-    </header>
-    <section class="main">
-        <div class="container">
-            <div class="cards">
-                <div class="card">
-                    <span class="card-title">Hobbit</span>
-                    <span class="card-subtitle">by J.R.R. Tolkien</span>
-                    <span class="card-pages">pages: 295</span>
-                    <div class="edit"></div>
-                </div>
-                <div class="card">
-                    <span class="card-title">Atomic Habits </span>
-                    <span class=" card-subtitle">by James Clear</span>
-                    <span class="card-pages">pages: 288</span>
-                    <div class="edit"></div>
-                </div>
-                <div class="card">
-                    <span class="card-title">Atomic Habits </span>
-                    <span class=" card-subtitle">by James Clear</span>
-                    <span class="card-pages">pages: 288</span>
-                    <div class="edit"></div>
-                </div>
-                <div class="card">
-                    <span class="card-title">Atomic Habits </span>
-                    <span class=" card-subtitle">by James Clear</span>
-                    <span class="card-pages">pages: 288</span>
-                    <div class="edit"></div>
+    <div class="body-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1 class="title">Library</h1>
+                    <a href="https://github.com/Asya0" class="desc">
+                        by Anna
+                    </a>
                 </div>
             </div>
 
-            <div class="add-book-popup">
-                <div class="popup-header">
-                    <p class="popup-title">add a new book</p>
-                    <img class="close-popup img" src="./assets/img/svg/close-popup.svg" alt="close popup">
-                </div>
-                <div class="popup-body">
-                    <div class="textbox">
-                        <input type="text" class="textBoxForm" placeholder="title" id="title">
-                        <input type="text" class="textBoxForm" placeholder="author" id="author">
-                        <input type="number" class="textBoxForm" placeholder="pages" id="pages">
+        </header>
+        <section class="main">
+            <div class="container">
+                <div class="cards">
+                    <div class="card">
+                        <span class="card-title">Hobbit</span>
+                        <span class="card-subtitle">by J.R.R. Tolkien</span>
+                        <span class="card-pages">pages: 295</span>
+                        <div class="edit"></div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Atomic Habits</span>
+                        <span class=" card-subtitle">by James Clear</span>
+                        <span class="card-pages">pages: 288</span>
+                        <div class="edit"></div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Eat That Frog</span>
+                        <span class=" card-subtitle">by Brian Tracy</span>
+                        <span class="card-pages">pages: 144</span>
+                        <div class="edit"></div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Atomic Habits</span>
+                        <span class=" card-subtitle">by James Clear</span>
+                        <span class="card-pages">pages: 288</span>
+                        <div class="edit"></div>
                     </div>
                 </div>
-                <div class="button-wrapper">
-                    <input type="button" id="submitBook" value="add book" class="addBook confetti-button">
+
+                <div class="add-book-popup">
+                    <div class="popup-header">
+                        <p class="popup-title">add a new book</p>
+                        <img class="close-popup img" src="./assets/img/svg/close-popup.svg" alt="close popup">
+                    </div>
+                    <div class="popup-body">
+                        <div class="textbox">
+                            <input type="text" class="textBoxForm" placeholder="title" id="title">
+                            <input type="text" class="textBoxForm" placeholder="author" id="author">
+                            <input type="number" class="textBoxForm" placeholder="pages" id="pages">
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <input type="button" id="submitBook" value="add book" class="addBook confetti-button">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="add-book-btn">
+
                 </div>
             </div>
-
-        </div>
-    </section>
-    <footer class="footer"></footer>
+        </footer>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="index.js"></script>
