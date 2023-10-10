@@ -212,14 +212,21 @@ section {
         padding: 10px 15px;
         border-radius: 10px;
         border: 1px solid $blue-light;
+        border: 1px solid #fff;
         background: linear-gradient(to right, $body-color, #71c1e1);
+        background-image: url(./assets/img/svg/heart-pattern.svg);
+        background-size: 100px !important;
+        animation: love-slide 8s linear infinite !important;
         font-size: 15px;
         color: #454869;
+        color: #fff;
         cursor: pointer;
         transition: color .4s ease;
 
         &:hover {
+            background: rgba(0, 0, 0, .3);
             color: $grey;
+            color: #fff;
             transition: color .4s ease;
 
         }

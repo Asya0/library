@@ -185,14 +185,21 @@ section {
   padding: 10px 15px;
   border-radius: 10px;
   border: 1px solid #00A8E8;
+  border: 1px solid #fff;
   background: linear-gradient(to right, #BBDEF0, #71c1e1);
+  background-image: url(./assets/img/svg/heart-pattern.svg);
+  background-size: 100px !important;
+  animation: love-slide 8s linear infinite !important;
   font-size: 15px;
   color: #454869;
+  color: #fff;
   cursor: pointer;
   transition: color 0.4s ease;
 }
 .add-book-popup #submitBook:hover {
+  background: rgba(0, 0, 0, 0.3);
   color: #63678a;
+  color: #fff;
   transition: color 0.4s ease;
 }
 
