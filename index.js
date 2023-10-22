@@ -22,7 +22,7 @@ const books = [
 ]
 const body = document.querySelector(".body-wrapper");
 let popupAddBook = document.querySelector(".add-book-popup");
-const cardsContainer = document.querySelector('.cards');
+/* const cardsContainer = document.querySelector('.cards');
 const cards = cardsContainer.querySelectorAll('.card');
 
 function createBookCard() {
@@ -36,7 +36,36 @@ function createBookCard() {
         <span class="card-title">${books[i].title} </span>
         <span class=" card-subtitle">by ${books[i].author} </span>
         <span class="card-pages">pages: ${books[i].page}</span>
-        <div class="edit"></div> `;
+        <div class="edit-block">
+        <img src="./assets/img/svg/change-icon.svg" class="edit"></img>
+        <img src="./assets/img/svg/close-popup.svg" class="remove" data-></img>
+        </div> `;
+        cards.appendChild(bookCard);
+    }
+}
+*/
+
+
+function createBookCard() {
+    const cards = document.querySelector(".cards");
+    cards.innerHTML = "";
+
+    for (let i = 0; i < books.length; i++) {
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('card');
+        bookCard.innerHTML = `
+        <span class="card-title">${books[i].title}</span>
+        <span class="card-subtitle">by ${books[i].author}</span>
+        <span class="card-pages">pages: ${books[i].page}</span>
+        <div class="edit-block">
+        <img src="./assets/img/svg/change-icon.svg" class="edit"></img>
+        <img src="./assets/img/svg/close-popup.svg" class="remove"></img>
+        </div>`;
+
+        // Устанавливаем data-атрибут с индексом
+        bookCard.setAttribute('index', i);
+
+        // Добавляем карточку в контейнер
         cards.appendChild(bookCard);
     }
 }
@@ -77,11 +106,10 @@ let newPage = document.querySelector("#pages")
 let submitBook = document.querySelector("#submitBook")
 
 function addNewBook() {
-    submitBook.addEventListener("click", function () {
+    submitBook.addEventListener("click", function (e) {
         const newTitle = document.getElementById("title").value;
         const newAuthor = document.getElementById("author").value;
         const newPage = document.getElementById("pages").value;
-        // console.log(newTitle)
 
 
         if (newTitle !== "" && newAuthor !== "" && newPage !== "") {
@@ -98,17 +126,27 @@ function addNewBook() {
             document.getElementById("author").value = "";
             document.getElementById("pages").value = "";
 
-            //проблема здесь. ничего не обновляется
             createBookCard();
-
+            showConfetti();
         }
+    });
+}
+let removeBookButtons = document.querySelectorAll(".remove");
+
+function removeBookFromLibrary() {
+    const bookCard = document.querySelectorAll(".card")
+    console.log(bookCard)
+    removeBookButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const index = event.target.dataset.bookCard;
+            conscole.log(bookCard[0])
+        });
     });
 }
 
 
-
 createBookCard();
-showConfetti();
 closePopup();
 openPopup();
 addNewBook();
+removeBookFromLibrary();

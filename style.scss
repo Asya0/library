@@ -129,16 +129,43 @@ section {
             font-size: 16px;
         }
 
-        .edit {
-            background: url(./assets/img/svg/change-icon.svg);
+        .edit-block {
+            background-repeat: no-repeat;
             position: absolute;
             display: block;
             z-index: 3;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             top: 10px;
-            left: 50px;
+            right: 10px;
+
+            .edit {
+                background-repeat: no-repeat;
+                position: absolute;
+                display: block;
+                z-index: 3;
+                width: 20px;
+                height: 20px;
+                top: 10px;
+                right: 30px;
+                cursor: pointer;
+            }
+
+            .remove {
+                background-repeat: no-repeat;
+                position: absolute;
+                display: block;
+                z-index: 3;
+                width: 30px;
+                height: 30px;
+                top: 5px;
+                right: 0px;
+                cursor: pointer;
+            }
         }
+
+
+
     }
 }
 
