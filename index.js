@@ -100,6 +100,7 @@ function closePopup() {
 // let click = body.addEventListener("click", function (e) {
 //     console.log(e.target)
 // })
+
 let newTitle = document.querySelector("#title")
 let newAuthor = document.querySelector("#author")
 let newPage = document.querySelector("#pages")
@@ -135,14 +136,17 @@ let removeBookButtons = document.querySelectorAll(".remove");
 
 function removeBookFromLibrary() {
     const bookCard = document.querySelectorAll(".card")
-    console.log(bookCard)
-    removeBookButtons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const index = event.target.dataset.bookCard;
-            conscole.log(bookCard[0])
-        });
-    });
+    // console.log(bookCard)
+    for (let elem of bookCard) {
+        elem.addEventListener("click", () => {
+            console.log("1")
+            elem.remove()
+        })
+        // console.log(elem)
+    }
 }
+
+
 
 
 createBookCard();
